@@ -1,0 +1,38 @@
+/* Homepage */
+.github-logo {
+    width: 75%;
+}
+
+/* Password strength meter */
+.pass-graybar {
+    height: 5px;
+    background-color: #CCC;
+    width: 50%;
+    position: relative;
+}
+
+.pass-colorbar {
+    height: 5px;
+    background-image: url(../images/passwordstrength.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pass-percent, .pass-text {
+    font-size: 1em;
+}
+
+.pass-percent {
+    margin-right: 5px;
+}
+
+/* Profile */
+.profile-img img {
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 640px) {
+    .profile-img img {
+    }
+}

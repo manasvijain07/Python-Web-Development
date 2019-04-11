@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}Sign Up | {{ super }}{% endblock %}
+
+{% load static from staticfiles %}
+{% block scripts %}
+    <script type="text/javascript" src="{% static 'js/password.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+    <form method="POST" action="{% url 'accounts:sign_up' %}">
+        {% csrf_token %}
+        {% for hidden in form.hidden_fields %}
+            {{ hidden }}
+        {% endfor %}
+        <div class="fieldWrapper">
+            {{ form.first_name.errors }}
+            <label for="{{ form.first_name.id_for_label }}">First Name:</label>
+            {{ form.first_name }}
+        </div>
+        <div class="fieldWrapper">
+            {{ form.last_name.errors }}
+            <label for="{{ form.last_name.id_for_label }}">Last Name:</label>
+            {{ form.last_name }}
+        </div>
+        <div class="fieldWrapper">
+            {{ form.username.errors }}
+            <label for="{{ form.username.id_for_label }}">Username:</label>
+            {{ form.username }}
+        </div>
+        <div class="fieldWrapper form-group">
+            {{ form.password1.errors }}
+            <label for="{{ form.password1.id_for_label }}">Password:</label>
+            {{ form.password1 }}
+        </div>
+        <div class="fieldWrapper">
+            {{ form.password2.errors }}
+            <label for="{{ form.password2.id_for_label }}">Password confirmation:</label>
+            {{ form.password2 }}
+        </div>
+        <input type="submit" class="button-primary" value="Sign Up"></form>
+{% endblock %}

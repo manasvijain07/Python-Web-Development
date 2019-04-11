@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% load imagekit %}
+
+{% block body %}
+    <div class="grid-50">
+        <h1>{{ user.username.title }}'s Profile</h1>
+        <p>Email: {{ user.email }}</p>
+        <p>First Name: {{ user.first_name }}</p>
+        <p>Last Name: {{ user.last_name }}</p>
+        <p>Birthday: {{ user.profile.birth_date }}</p>
+        <p>Bio: {{ user.profile.bio }}</p>
+        <p>City: {{ user.profile.city }}</p>
+        <p>State: {{ user.profile.state }}</p>
+        <p>Favorite Animal: {{ user.profile.fav_animal }}</p>
+        <p>Hobby: {{ user.profile.hobby }}</p>
+    </div>
+    <div class="grid-50 profile-img">
+    {% generateimage 'accounts:profile_pic' source=user.profile.avatar %}
+    </div>
+{% endblock %}

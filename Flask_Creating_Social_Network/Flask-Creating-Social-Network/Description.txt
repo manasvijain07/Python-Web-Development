@@ -1,0 +1,23 @@
+# Flask-Social-Networking
+
+This is a Small Social Networking website developed using Flask and Peewee. 
+It uses Jinja-2 templating engine. 
+
+As a user i can perform following actions:-
+
+As a user I can create an account using my first name, last name, username, and password.
+
+As a user I can add additional profile details to my created account such as email, bio, birthday, city, state, favorite animal, and hobby.
+
+As a user I can view and edit my profile and also logout from my profile.
+
+As a user i can follow some other user and see his/her posts.
+
+As a user some other user can follow me and see my posts.
+
+As a user I can change my password at any time on the change password page.
+
+Any user can sign up and login to utilize this facilities which i mentioned above.
+
+As a User,I will be redirected to customized error page if i will give bad request.
+

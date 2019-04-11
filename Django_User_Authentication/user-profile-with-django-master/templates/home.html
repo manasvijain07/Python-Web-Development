@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% load static from staticfiles %}
+
+{% block body %}
+    <div class="grid-25">
+        <a href="https://github.com/jhoover4/user-profile-with-django" target="_blank"><img class="github-logo"
+                                                                                            src="{% static 'images/GitHub-Mark.png' %}"></a>
+        <p>The source code for this project is hosted on <a href="https://github.com/jhoover4/user-profile-with-django"
+                                                            target="_blank">GitHub</a>.
+    </div>
+    <div class="grid-75">
+        <h1>Welcome!</h1>
+        <p>This is a sample Django user login project. Features include:</p>
+        <ul>
+            <li>Custom password validation</li>
+            <li>A password strength “meter” that displays when validating passwords</li>
+            <li>Ability for user to change existing password</li>
+            <li>User profile page with various editable fields that contain custom validation as needed</li>
+            <li>JavaScript date dropdown for the Date of Birth validation feature</li>
+            <li>Basic HTML stripping for text formatting on the "bio" text area</li>
+            <li>Online image editor for the user avatar. Includes basic functionality: rotate, crop and flip</li>
+        </ul>
+    </div>
+{% endblock %}
