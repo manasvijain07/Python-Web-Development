@@ -1,4 +1,4 @@
-Persnol learning journal(with django):-Learning management system
+Personal learning journal(with django):-Learning management system
 
 
 User Stories:-
