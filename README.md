@@ -18,7 +18,7 @@ any user can sign up and logn to utilize this facilities which i mentioned just 
 
 
 
-Project 2:Persnol learning journal(with django):-Learning management system
+Project 2:Personal learning journal(with django):-Learning management system
 
 
 User Stories:-
@@ -42,7 +42,7 @@ A testing account is already setup.
 
 Username: admin@example.com
 Password: password
-Now you may start adding/editing/deleting entries.
+
 ------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Important Points:-
@@ -58,31 +58,3 @@ Important Points:-
 MIDDLEWARE setting:
 SessionMiddleware manages sessions across requests.
 AuthenticationMiddleware associates users with requests using sessions.
-
-
--------->You can also change a password programmatically, using set_password():user class method
-
----------->for static files--->
------>url.py
-1.urlpatterns += staticfiles_urlpatterns()
-2.from django.conf.urls.static import static
-3.from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-
------->settings.py
-1.STATIC_URL = '/static/'
-
-2.STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'assets'),
-]
-
-INSTALLED APPS:-django.contrib.staticfiles
-
-
------->render()
-from django.shortcuts import get_object_or_404, render
-render(request, template_name, context=None, content_type=None, status=None, using=None)[source]
-Combines a given template with a given context dictionary and returns an HttpResponse object with that rendered text.
-
-
-------->REST API'S
-You have been learning Django and building great things. Suddenly it hits you. How do I take all this data I have and make it available to the world? Look no further than Django Rest Framework (DRF). DRF is a powerful and flexible framework, on top of a framework (Django), for building RESTful Web APIs. Built-in features like the Web browsable API, authentication policies, robust serialization for your models and excellent documentation make it a great choice for your API needs.
